@@ -15,10 +15,12 @@
     }
 
     header {
-      background-color: #ffffff;
-      padding: 60px 20px;
-      text-align: center;
-      border-bottom: 1px solid #e5e5e5;
+      background: linear-gradient(
+  180deg,
+  #ffffff 0%,
+  #fff7ef 60%,
+  #ffe8d2 100%
+);
     }
 
     h1 {
@@ -107,15 +109,30 @@
   border-radius: 50%;
   object-fit: cover;
   object-position: 30% 80%; /* πιο αριστερά (30%) και πολύ πιο κάτω (80%) */
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.08);
+  background-color: #fff;
 }
+
+    .photo-wrapper {
+  width: 220px;
+  height: 220px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  background: #ffe3c4; /* ζεστό, απαλό χρώμα */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
   </style>
 </head>
 
 <body>
 
 <header>
-  <img src="photo.png" alt="Despina Fostiropoulou" class="profile-img">
+  <div class="photo-wrapper">
+  <img src="photο.png" alt="Despina Fostiropoulou" class="profile-img">
+</div>
 
   <h1>Despina Fostiropoulou</h1>
   <p class="subtitle">Project Manager</p>
