@@ -59,19 +59,38 @@
     }
 
     .project-card {
-      background-color: #fff;
-      border: 1px solid #e0e0e0;
-      border-radius: 8px;
-      padding: 16px;
-      margin-bottom: 20px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 30px;
+  width: 100%;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
 
     .project-card:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+
+    .project-card-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 8px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+    .project-card-desc {
+  font-size: 15px;
+  color: #555;
+  margin-top: 4px;
+}
 
     .project-card a {
       font-weight: 600;
@@ -152,39 +171,74 @@
   <h2>Portfolio</h2>
 
   <div class="project-card">
-    <a href="https://github.com/DespinaFostiropoulou/Mongodb-Elearning-Course" target="_blank">MongoDB E-learning Course</a>
-    <p>Educational platform with datasets & queries</p>
-  </div>
+  <a href="https://github.com/DespinaFostiropoulou/Mongodb-Elearning-Course" 
+     class="project-card-title" target="_blank">
+     MongoDB Interactive E‑Learning Platform
+  </a>
+  <p class="project-card-desc">
+    A structured educational platform featuring lessons, datasets, and practical MongoDB exercises.
+  </p>
+</div>
 
   <div class="project-card">
-    <a href="https://github.com/DespinaFostiropoulou/SPSS-ICT-Education" target="_blank">SPSS ICT Education</a>
-    <p>Quantitative analysis of ICT usage in schools</p>
-  </div>
+  <a href="https://github.com/DespinaFostiropoulou/SPSS-ICT-Education" 
+     class="project-card-title" target="_blank">
+     ICT in Education — SPSS Statistical Analysis
+  </a>
+  <p class="project-card-desc">
+    A quantitative study analyzing the use of ICT tools in schools using SPSS descriptive and inferential methods.
+  </p>
+</div>
 
   <div class="project-card">
-    <a href="https://github.com/DespinaFostiropoulou/SPSS-Analysis-Project" target="_blank">SPSS Analysis Project</a>
-    <p>Statistical research using SPSS syntax</p>
-  </div>
+  <a href="https://github.com/DespinaFostiropoulou/SPSS-Analysis-Project" 
+     class="project-card-title" target="_blank">
+     SPSS Research Project
+  </a>
+  <p class="project-card-desc">
+    A complete statistical research workflow including data cleaning, hypothesis testing, and SPSS syntax automation.
+  </p>
+</div>
 
   <div class="project-card">
-    <a href="https://github.com/DespinaFostiropoulou/Django-Bookstore-App" target="_blank">Django Bookstore App</a>
-    <p>Python web app for bookstore management</p>
-  </div>
+  <a href="https://github.com/DespinaFostiropoulou/Django-Bookstore-App" 
+     class="project-card-title" target="_blank">
+     Django Bookstore Management App
+  </a>
+  <p class="project-card-desc">
+    A Python‑based web application for managing books, authors, categories, and inventory operations.
+  </p>
+</div>
 
   <div class="project-card">
-    <a href="https://github.com/DespinaFostiropoulou/Django-Attractions-Android-API" target="_blank">Django Attractions Android API</a>
-    <p>Backend API for tourist attractions</p>
-  </div>
+  <a href="https://github.com/DespinaFostiropoulou/Django-Attractions-Android-API" 
+     class="project-card-title" target="_blank">
+     Tourist Attractions API — Django Backend
+  </a>
+  <p class="project-card-desc">
+    A RESTful API powering an Android app for browsing and managing tourist attractions.
+  </p>
+</div>
+
+ <div class="project-card">
+  <a href="https://github.com/DespinaFostiropoulou/MySQL-Film-Orchestration-DB" 
+     class="project-card-title" target="_blank">
+     Film Production Database — MySQL
+  </a>
+  <p class="project-card-desc">
+    A relational database system designed for organizing film production workflows, roles, and orchestration.
+  </p>
+</div>
 
   <div class="project-card">
-    <a href="https://github.com/DespinaFostiropoulou/MySQL-Film-Orchestration-DB" target="_blank">MySQL Film Orchestration DB</a>
-    <p>Relational database for film production</p>
-  </div>
-
-  <div class="project-card">
-    <a href="https://DespinaFostiropoulou.github.io" target="_blank">Portfolio Website</a>
-    <p>Hosted on GitHub Pages</p>
-  </div>
+  <a href="https://DespinaFostiropoulou.github.io" 
+     class="project-card-title" target="_blank">
+     Personal Portfolio Website
+  </a>
+  <p class="project-card-desc">
+    A clean, minimal, modern portfolio built with HTML/CSS and hosted on GitHub Pages.
+  </p>
+</div>
 
   <h2>Contact</h2>
   <div class="contact">
