@@ -71,45 +71,69 @@
       color: #444;
     }
 
-    .project-card {
-  background-color: #fff;
-  border: 1px solid #e0e0e0;
-  border-radius: 12px;
-  padding: 28px 32px; /* περισσότερο ύψος & πλάτος */
-  margin: 30px auto;  /* άνετο spacing */
+/* PROJECT CARD — Premium Minimal Classic */
+.project-card {
+  background: linear-gradient(180deg, #ffffff 0%, #faf7f2 100%);
+  border: 1px solid #e5e0d8;
+  border-radius: 14px;
+  padding: 32px 36px;
+  margin: 40px auto;
   width: 100%;
-  max-width: 850px;   /* πιο μακρόστενο οριζόντια */
-  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  max-width: 900px; /* πιο μακρόστενο οριζόντια */
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  border-left: 6px solid #d8c7b3; /* editorial aesthetic */
+  transition: 
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-left-color 0.25s ease,
+    background 0.25s ease;
+  
+  opacity: 0;
+  animation: fadeIn 0.9s ease forwards;
 }
 
+/* FADE-IN ANIMATION */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* HOVER EFFECT — micro interaction */
 .project-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 26px rgba(0,0,0,0.12);
+  border-left-color: #c4ad94; /* subtle warm shift */
+  background: linear-gradient(180deg, #ffffff 0%, #f5efe7 100%);
 }
 
+/* TITLE */
 .project-card-title {
-  font-size: 22px;
+  font-size: 24px;
   font-weight: 700;
   color: #2c3e50;
   text-decoration: none;
   display: inline-block;
-  margin-bottom: 10px;
-  font-family: "Georgia", serif;
+  margin-bottom: 6px;
+  font-family: "Georgia", serif; /* classic touch */
 }
 
+/* SUBTITLE (serif, aesthetic) */
+.project-card-subtitle {
+  font-size: 14px;
+  font-family: "Georgia", serif;
+  color: #8a7f72;
+  margin-bottom: 14px;
+  letter-spacing: 0.3px;
+}
+
+/* DESCRIPTION */
 .project-card-desc {
   font-size: 16px;
   color: #555;
   line-height: 1.7;
   margin-top: 6px;
 }
-
-    @keyframes fadeIn { 
-      from { opacity: 0; transform: translateY(10px); } 
-      to { opacity: 1; transform: translateY(0); } 
-    } 
-
+  
     .project-card a {
       font-weight: 600;
       font-size: 18px;
@@ -188,31 +212,34 @@
 
   <h2>Portfolio</h2>
 
-  <div class="project-card">
+ <div class="project-card">
   <a href="https://github.com/DespinaFostiropoulou/Mongodb-Elearning-Course" 
      class="project-card-title" target="_blank">
      MongoDB Interactive E‑Learning Platform
   </a>
+  <div class="project-card-subtitle">Database Education · MongoDB</div>
   <p class="project-card-desc">
     A structured educational platform featuring lessons, datasets, and practical MongoDB exercises.
   </p>
 </div>
 
-  <div class="project-card">
+<div class="project-card">
   <a href="https://github.com/DespinaFostiropoulou/SPSS-ICT-Education" 
      class="project-card-title" target="_blank">
      ICT in Education — SPSS Statistical Analysis
   </a>
+  <div class="project-card-subtitle">Quantitative Research · SPSS</div>
   <p class="project-card-desc">
     A quantitative study analyzing the use of ICT tools in schools using SPSS descriptive and inferential methods.
   </p>
 </div>
 
- <div class="project-card">
+<div class="project-card">
   <a href="https://github.com/DespinaFostiropoulou/SPSS-Analysis-Project" 
      class="project-card-title" target="_blank">
      SPSS Research Project
   </a>
+  <div class="project-card-subtitle">Statistical Analysis · SPSS</div>
   <p class="project-card-desc">
     A complete statistical research workflow including data cleaning, hypothesis testing, and SPSS syntax automation.
   </p>
@@ -223,16 +250,18 @@
      class="project-card-title" target="_blank">
      Django Bookstore Management App
   </a>
+  <div class="project-card-subtitle">Web Development · Django</div>
   <p class="project-card-desc">
     A Python‑based web application for managing books, authors, categories, and inventory operations.
   </p>
 </div>
-
+  
   <div class="project-card">
   <a href="https://github.com/DespinaFostiropoulou/Django-Attractions-Android-API" 
      class="project-card-title" target="_blank">
      Tourist Attractions API — Django Backend
   </a>
+  <div class="project-card-subtitle">API Design · Django REST</div>
   <p class="project-card-desc">
     A RESTful API powering an Android app for browsing and managing tourist attractions.
   </p>
@@ -243,6 +272,7 @@
      class="project-card-title" target="_blank">
      Film Production Database — MySQL
   </a>
+  <div class="project-card-subtitle">Relational Databases · MySQL</div>
   <p class="project-card-desc">
     A relational database system designed for organizing film production workflows, roles, and orchestration.
   </p>
@@ -253,6 +283,7 @@
      class="project-card-title" target="_blank">
      Personal Portfolio Website
   </a>
+  <div class="project-card-subtitle">Frontend · HTML/CSS</div>
   <p class="project-card-desc">
     A clean, minimal, modern portfolio built with HTML/CSS and hosted on GitHub Pages.
   </p>
