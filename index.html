@@ -5,103 +5,23 @@
   <title>Despina Fostiropoulou | Project Manager Portfolio</title>
 
   <style>
-
-  :root {
-  --bg-color: #fff4e6; /* το ροδακινί background που έχεις */
-  --text-color: #333;
-  --header-bg: radial-gradient(circle at top left, #f7f2eb 0%, #ffffff 70%);
-  --card-bg: #ffffff;
-  --card-border: #e5e0d8;
-  --card-gradient: linear-gradient(180deg, #ffffff 0%, #faf7f2 100%);
-  --card-gradient-hover: linear-gradient(180deg, #ffffff 0%, #f5efe7 100%);
-  --accent-border: #d8c7b3;
-  --accent-border-hover: #c4ad94;
-}
-
-body.dark-mode {
-  --bg-color: #1e1e1e;
-  --text-color: #e6e6e6;
-  --header-bg: radial-gradient(circle at top left, #2a2a2a 0%, #1e1e1e 70%);
-  --card-bg: #2a2a2a;
-  --card-border: #444;
-  --card-gradient: linear-gradient(180deg, #2a2a2a 0%, #242424 100%);
-  --card-gradient-hover: linear-gradient(180deg, #2a2a2a 0%, #1f1f1f 100%);
-  --accent-border: #6a5f52;
-  --accent-border-hover: #8a7f72;
-}
-
-    #theme-toggle {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  background: none;
-  border: 2px solid var(--text-color);
-  border-radius: 50%;
-  padding: 8px 12px;
-  cursor: pointer;
-  font-size: 18px;
-  color: var(--text-color);
-  transition: 0.3s ease;
-}
-
-#theme-toggle:hover {
-  transform: scale(1.1);
-}
-
-    /* PROJECT GRID */
-    .project-grid { 
-      display: grid; 
-      grid-template-columns: 1fr; 
-      gap: 30px;
-      margin-top: 40px; 
-    } 
-    @media (min-width: 850px) { 
-      .project-grid { 
-        grid-template-columns: 1fr 1fr; 
-      } 
+    body {
+      font-family: Georgia, serif;
+      background-color: #fff4e6;
+      color: #333;
+      margin: 0;
+      padding: 0;
     }
 
-    body {
-  font-family: Arial, sans-serif;
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  margin: 0;
-  padding: 0;
-}
-
     header {
-  background: var(--header-bg);
-  padding: 60px 20px;
-  text-align: center;
-  border-bottom: 1px solid var(--card-border);
-}
-
-    .top-nav {
-  position: fixed;
-  top: 20px;
-  left: 20px;
-  display: flex;
-  gap: 20px;
-  z-index: 1000;
-}
-
-.nav-link {
-  font-size: 16px;
-  font-weight: 600;
-  color: var(--text-color);
-  text-decoration: none;
-  padding: 6px 10px;
-  border-radius: 6px;
-  transition: 0.3s ease;
-}
-
-.nav-link:hover {
-  background-color: rgba(0,0,0,0.05);
-}
+      background: radial-gradient(circle at top left, #f7f2eb 0%, #ffffff 70%);
+      padding: 60px 20px;
+      text-align: center;
+      border-bottom: 1px solid #e5e0d8;
+    }
 
     h1 {
-      h1 {
-      font-family: Arial, sans-serif;
+      font-family: Georgia, serif;
       font-size: 42px;
       margin-bottom: 10px;
       color: #222;
@@ -115,13 +35,13 @@ body.dark-mode {
     }
 
     p.description {
-  max-width: 700px;
-  margin: 0 auto;
-  font-size: 17px;
-  color: #444;
-  line-height: 1.7;
-  text-align: center;
-   }
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 17px;
+      color: #444;
+      line-height: 1.7;
+      text-align: center;
+    }
 
     .container {
       max-width: 900px;
@@ -130,85 +50,64 @@ body.dark-mode {
     }
 
     h2 {
-      font-family: "Georgia", serif;
+      font-family: Georgia, serif;
       font-size: 28px;
       margin-top: 40px;
       color: #444;
     }
 
-/* PROJECT CARD — Premium Minimal Classic */
-.project-card {
-  background: var(--card-gradient);
-  border: 1px solid var(--card-border);
-  border-radius: 14px;
-  padding: 32px 36px;
-  margin: 40px auto;
-  width: 100%;
-  max-width: 900px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
-  border-left: 6px solid var(--accent-border);
-  transition: 
-    transform 0.25s ease,
-    box-shadow 0.25s ease,
-    border-left-color 0.25s ease,
-    background 0.25s ease;
-}
+    /* PROJECT CARD — Premium Minimal Classic */
+    .project-card {
+      background: linear-gradient(180deg, #ffffff 0%, #faf7f2 100%);
+      border: 1px solid #e5e0d8;
+      border-radius: 14px;
+      padding: 32px 36px;
+      margin: 40px auto;
+      width: 100%;
+      max-width: 900px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+      border-left: 6px solid #d8c7b3;
+      transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-left-color 0.25s ease,
+        background 0.25s ease;
+    }
 
-/* FADE-IN ANIMATION */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(12px); }
-  to { opacity: 1; transform: translateY(0); }
-}
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 26px rgba(0,0,0,0.12);
+      border-left-color: #c4ad94;
+      background: linear-gradient(180deg, #ffffff 0%, #f5efe7 100%);
+    }
 
-/* HOVER EFFECT — micro interaction */
-.project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 26px rgba(0,0,0,0.12);
-  border-left-color: var(--accent-border-hover);
-  background: var(--card-gradient-hover);
-}
-
-.project-card-title {
-  font-size: 24px;
-  font-weight: 700;
-  color: var(--text-color);
-  text-decoration: none;
-  display: inline-block;
-  margin-bottom: 6px;
-  font-family: Arial, sans-serif;
-}
-
-.project-card-subtitle {
-  font-size: 14px;
-  font-family: Arial, sans-serif;
-  color: var(--accent-border-hover);
-  margin-bottom: 14px;
-  letter-spacing: 0.3px;
-}
-
-.project-card-desc {
-  font-size: 16px;
-  color: var(--text-color);
-  opacity: 0.85;
-  line-height: 1.7;
-  margin-top: 6px;
-}
-  
-    .project-card a {
-      font-weight: 600;
-      font-size: 18px;
+    .project-card-title {
+      font-size: 24px;
+      font-weight: 700;
       color: #2c3e50;
-      text-decoration: none; /* Αφαιρούμε την υπογράμμιση */
+      text-decoration: none;
+      display: inline-block;
+      margin-bottom: 6px;
+      font-family: Georgia, serif;
+    }
+
+    .project-card-subtitle {
+      font-size: 14px;
+      font-family: Georgia, serif;
+      color: #8a7f72;
+      margin-bottom: 14px;
+      letter-spacing: 0.3px;
+    }
+
+    .project-card-desc {
+      font-size: 16px;
+      color: #555;
+      line-height: 1.7;
+      margin-top: 6px;
     }
 
     .project-card a:hover {
-      text-decoration: none; /* Δεν εμφανίζεται υπογράμμιση ούτε στο hover */
-    }
-
-    .project-card p {
-      margin: 8px 0 0;
-      font-size: 15px;
-      color: #555;
+      text-decoration: none;
     }
 
     .contact {
@@ -222,46 +121,24 @@ body.dark-mode {
       color: #777;
     }
 
- .profile-img {
-  display: block;
-  margin: 0 auto 20px;
-  width: 190px;
-  height: 190px;
-  border-radius: 50%;
-  object-fit: cover;
-  object-position: 30% 80%; /* πιο αριστερά (30%) και πολύ πιο κάτω (80%) */
-  box-shadow: 0 0 40px rgba(0, 0, 0, 0.08);
-  background-color: #fff;
-}
-
-    .photo-wrapper {
-  width: 220px;
-  height: 220px;
-  margin: 0 auto 20px;
-  border-radius: 50%;
-  background: #ffe3c4; /* ζεστό, απαλό χρώμα */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
+    .profile-img {
+      display: block;
+      margin: 0 auto 20px;
+      width: 190px;
+      height: 190px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: 30% 80%;
+      box-shadow: 0 0 40px rgba(0, 0, 0, 0.08);
+      background-color: #fff;
+    }
   </style>
 </head>
-
-  <script>
-  const toggleBtn = document.getElementById("theme-toggle");
-  toggleBtn.addEventListener("click", () => {
-    document.body.classList.toggle("dark-mode");
-    toggleBtn.textContent = document.body.classList.contains("dark-mode") ? "☀️" : "🌙";
-  });
-</script>
 
 <body>
 
 <header>
-  <div class="photo-wrapper">
   <img src="photo.png" alt="Despina Fostiropoulou" class="profile-img">
-</div>
 
   <h1>Despina Fostiropoulou</h1>
   <p class="subtitle">Project Manager</p>
@@ -270,7 +147,7 @@ body.dark-mode {
     Hi, I'm Despina! An aspiring project manager with a Bachelor's degree in History and Archaeology,
     complemented by a strong foundation in computer science through a postgraduate program at the
     International Hellenic University. I’m passionate about using data‑driven approaches to solve
-    complex problems, improve processes, and generate meaningful insights.  
+    complex problems, improve processes, and generate meaningful insights.
     This is my Data Science Portfolio — a curated collection of projects that reflect my skills,
     analytical mindset, and continuous growth.
   </p>
@@ -280,82 +157,82 @@ body.dark-mode {
 
   <h2>Portfolio</h2>
 
- <div class="project-card">
-  <a href="https://github.com/DespinaFostiropoulou/Mongodb-Elearning-Course" 
-     class="project-card-title" target="_blank">
-     MongoDB Interactive E‑Learning Platform
-  </a>
-  <div class="project-card-subtitle">Database Education · MongoDB</div>
-  <p class="project-card-desc">
-    A structured educational platform featuring lessons, datasets, and practical MongoDB exercises.
-  </p>
-</div>
-
-<div class="project-card">
-  <a href="https://github.com/DespinaFostiropoulou/SPSS-ICT-Education" 
-     class="project-card-title" target="_blank">
-     ICT in Education — SPSS Statistical Analysis
-  </a>
-  <div class="project-card-subtitle">Quantitative Research · SPSS</div>
-  <p class="project-card-desc">
-    A quantitative study analyzing the use of ICT tools in schools using SPSS descriptive and inferential methods.
-  </p>
-</div>
-
-<div class="project-card">
-  <a href="https://github.com/DespinaFostiropoulou/SPSS-Analysis-Project" 
-     class="project-card-title" target="_blank">
-     SPSS Research Project
-  </a>
-  <div class="project-card-subtitle">Statistical Analysis · SPSS</div>
-  <p class="project-card-desc">
-    A complete statistical research workflow including data cleaning, hypothesis testing, and SPSS syntax automation.
-  </p>
-</div>
+  <div class="project-card">
+    <a href="https://github.com/DespinaFostiropoulou/Mongodb-Elearning-Course"
+       class="project-card-title" target="_blank">
+       MongoDB Interactive E‑Learning Platform
+    </a>
+    <div class="project-card-subtitle">Database Education · MongoDB</div>
+    <p class="project-card-desc">
+      A structured educational platform featuring lessons, datasets, and practical MongoDB exercises.
+    </p>
+  </div>
 
   <div class="project-card">
-  <a href="https://github.com/DespinaFostiropoulou/Django-Bookstore-App" 
-     class="project-card-title" target="_blank">
-     Django Bookstore Management App
-  </a>
-  <div class="project-card-subtitle">Web Development · Django</div>
-  <p class="project-card-desc">
-    A Python‑based web application for managing books, authors, categories, and inventory operations.
-  </p>
-</div>
-  
-  <div class="project-card">
-  <a href="https://github.com/DespinaFostiropoulou/Django-Attractions-Android-API" 
-     class="project-card-title" target="_blank">
-     Tourist Attractions API — Django Backend
-  </a>
-  <div class="project-card-subtitle">API Design · Django REST</div>
-  <p class="project-card-desc">
-    A RESTful API powering an Android app for browsing and managing tourist attractions.
-  </p>
-</div>
-
- <div class="project-card">
-  <a href="https://github.com/DespinaFostiropoulou/MySQL-Film-Orchestration-DB" 
-     class="project-card-title" target="_blank">
-     Film Production Database — MySQL
-  </a>
-  <div class="project-card-subtitle">Relational Databases · MySQL</div>
-  <p class="project-card-desc">
-    A relational database system designed for organizing film production workflows, roles, and orchestration.
-  </p>
-</div>
+    <a href="https://github.com/DespinaFostiropoulou/SPSS-ICT-Education"
+       class="project-card-title" target="_blank">
+       ICT in Education — SPSS Statistical Analysis
+    </a>
+    <div class="project-card-subtitle">Quantitative Research · SPSS</div>
+    <p class="project-card-desc">
+      A quantitative study analyzing the use of ICT tools in schools using SPSS descriptive and inferential methods.
+    </p>
+  </div>
 
   <div class="project-card">
-  <a href="https://DespinaFostiropoulou.github.io" 
-     class="project-card-title" target="_blank">
-     Personal Portfolio Website
-  </a>
-  <div class="project-card-subtitle">Frontend · HTML/CSS</div>
-  <p class="project-card-desc">
-    A clean, minimal, modern portfolio built with HTML/CSS and hosted on GitHub Pages.
-  </p>
-</div>
+    <a href="https://github.com/DespinaFostiropoulou/SPSS-Analysis-Project"
+       class="project-card-title" target="_blank">
+       SPSS Research Project
+    </a>
+    <div class="project-card-subtitle">Statistical Analysis · SPSS</div>
+    <p class="project-card-desc">
+      A complete statistical research workflow including data cleaning, hypothesis testing, and SPSS syntax automation.
+    </p>
+  </div>
+
+  <div class="project-card">
+    <a href="https://github.com/DespinaFostiropoulou/Django-Bookstore-App"
+       class="project-card-title" target="_blank">
+       Django Bookstore Management App
+    </a>
+    <div class="project-card-subtitle">Web Development · Django</div>
+    <p class="project-card-desc">
+      A Python‑based web application for managing books, authors, categories, and inventory operations.
+    </p>
+  </div>
+
+  <div class="project-card">
+    <a href="https://github.com/DespinaFostiropoulou/Django-Attractions-Android-API"
+       class="project-card-title" target="_blank">
+       Tourist Attractions API — Django Backend
+    </a>
+    <div class="project-card-subtitle">API Design · Django REST</div>
+    <p class="project-card-desc">
+      A RESTful API powering an Android app for browsing and managing tourist attractions.
+    </p>
+  </div>
+
+  <div class="project-card">
+    <a href="https://github.com/DespinaFostiropoulou/MySQL-Film-Orchestration-DB"
+       class="project-card-title" target="_blank">
+       Film Production Database — MySQL
+    </a>
+    <div class="project-card-subtitle">Relational Databases · MySQL</div>
+    <p class="project-card-desc">
+      A relational database system designed for organizing film production workflows, roles, and orchestration.
+    </p>
+  </div>
+
+  <div class="project-card">
+    <a href="https://DespinaFostiropoulou.github.io"
+       class="project-card-title" target="_blank">
+       Personal Portfolio Website
+    </a>
+    <div class="project-card-subtitle">Frontend · HTML/CSS</div>
+    <p class="project-card-desc">
+      A clean, minimal, modern portfolio built with HTML/CSS and hosted on GitHub Pages.
+    </p>
+  </div>
 
   <h2>Contact</h2>
   <div class="contact">
@@ -370,11 +247,4 @@ body.dark-mode {
 </footer>
 
 </body>
-  <button id="theme-toggle">🌙</button>
-
-<nav class="top-nav">
-  <a href="index.html" class="nav-link">Home</a>
-  <a href="cv.html" class="nav-link">CV</a>
-</nav>
-
 </html>
