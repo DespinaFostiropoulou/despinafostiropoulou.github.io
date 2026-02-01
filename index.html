@@ -132,6 +132,29 @@
       box-shadow: 0 0 40px rgba(0, 0, 0, 0.08);
       background-color: #fff;
     }
+
+    .top-nav {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  gap: 20px;
+  z-index: 1000;
+}
+
+.nav-link {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  text-decoration: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: 0.3s ease;
+}
+
+.nav-link:hover {
+  background-color: rgba(0,0,0,0.05);
+}
   </style>
 </head>
 
@@ -247,4 +270,10 @@
 </footer>
 
 </body>
+  
+  <nav class="top-nav">
+  <a href="index.html" class="nav-link">Home</a>
+  <a href="cv.html" class="nav-link">CV</a>
+</nav>
+
 </html>
