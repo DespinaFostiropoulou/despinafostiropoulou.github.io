@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Despina Fostiropoulou | Portfolio</title>
+  <title>Despina Fostiropoulou | Project Manager Portfolio</title>
 
   <style>
     body {
       margin: 0;
       padding: 0;
       font-family: "Inter", sans-serif;
-      background-color: #faf9f7;
+      background-color: #fff4e6; /* Ζεστό ροδακινί */
       color: #333;
       line-height: 1.6;
     }
@@ -28,13 +28,6 @@
       color: #222;
     }
 
-    h2 {
-      font-family: "Georgia", serif;
-      font-size: 28px;
-      margin-top: 40px;
-      color: #444;
-    }
-
     p.subtitle {
       font-size: 18px;
       color: #666;
@@ -47,25 +40,47 @@
       padding: 0 20px;
     }
 
-    ul {
-      list-style: none;
-      padding: 0;
+    h2 {
+      font-family: "Georgia", serif;
+      font-size: 28px;
+      margin-top: 40px;
+      color: #444;
     }
 
-    li {
-      margin-bottom: 15px;
-      padding: 12px 0;
-      border-bottom: 1px solid #e5e5e5;
+    .project-card {
+      background-color: #fff;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      padding: 16px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
-    a {
+    .project-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .project-card a {
+      font-weight: 600;
+      font-size: 18px;
       color: #2c3e50;
       text-decoration: none;
-      font-weight: 600;
     }
 
-    a:hover {
+    .project-card a:hover {
       text-decoration: underline;
+    }
+
+    .project-card p {
+      margin: 8px 0 0;
+      font-size: 15px;
+      color: #555;
+    }
+
+    .contact {
+      font-size: 16px;
     }
 
     footer {
@@ -74,38 +89,71 @@
       font-size: 14px;
       color: #777;
     }
+
+    .profile-img {
+      display: block;
+      margin: 0 auto;
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
   </style>
 </head>
 
 <body>
 
 <header>
+  <img src="your-photo.jpg" alt="Despina Fostiropoulou" class="profile-img">
   <h1>Despina Fostiropoulou</h1>
-  <p class="subtitle">Project Manager • Data & Business Analyst • Historian</p>
+  <p class="subtitle">Project Manager</p>
 </header>
 
 <div class="container">
 
   <h2>My Projects</h2>
-  <ul>
-    <li><a href="https://github.com/DespinaFostiropoulou/Mongodb-Elearning-Course" target="_blank">MongoDB E-learning Course</a> — Educational platform with datasets & queries</li>
 
-    <li><a href="https://github.com/DespinaFostiropoulou/SPSS-ICT-Education" target="_blank">SPSS ICT Education</a> — Quantitative analysis of ICT usage in schools</li>
+  <div class="project-card">
+    <a href="https://github.com/DespinaFostiropoulou/Mongodb-Elearning-Course" target="_blank">MongoDB E-learning Course</a>
+    <p>Educational platform with datasets & queries</p>
+  </div>
 
-    <li><a href="https://github.com/DespinaFostiropoulou/SPSS-Analysis-Project" target="_blank">SPSS Analysis Project</a> — Statistical research using SPSS syntax</li>
+  <div class="project-card">
+    <a href="https://github.com/DespinaFostiropoulou/SPSS-ICT-Education" target="_blank">SPSS ICT Education</a>
+    <p>Quantitative analysis of ICT usage in schools</p>
+  </div>
 
-    <li><a href="https://github.com/DespinaFostiropoulou/Django-Bookstore-App" target="_blank">Django Bookstore App</a> — Python web app for bookstore management</li>
+  <div class="project-card">
+    <a href="https://github.com/DespinaFostiropoulou/SPSS-Analysis-Project" target="_blank">SPSS Analysis Project</a>
+    <p>Statistical research using SPSS syntax</p>
+  </div>
 
-    <li><a href="https://github.com/DespinaFostiropoulou/Django-Attractions-Android-API" target="_blank">Django Attractions Android API</a> — Backend API for tourist attractions</li>
+  <div class="project-card">
+    <a href="https://github.com/DespinaFostiropoulou/Django-Bookstore-App" target="_blank">Django Bookstore App</a>
+    <p>Python web app for bookstore management</p>
+  </div>
 
-    <li><a href="https://github.com/DespinaFostiropoulou/MySQL-Film-Orchestration-DB" target="_blank">MySQL Film Orchestration DB</a> — Relational database for film production</li>
+  <div class="project-card">
+    <a href="https://github.com/DespinaFostiropoulou/Django-Attractions-Android-API" target="_blank">Django Attractions Android API</a>
+    <p>Backend API for tourist attractions</p>
+  </div>
 
-    <li><a href="https://DespinaFostiropoulou.github.io" target="_blank">Portfolio Website</a> — Hosted on GitHub Pages</li>
-  </ul>
+  <div class="project-card">
+    <a href="https://github.com/DespinaFostiropoulou/MySQL-Film-Orchestration-DB" target="_blank">MySQL Film Orchestration DB</a>
+    <p>Relational database for film production</p>
+  </div>
+
+  <div class="project-card">
+    <a href="https://DespinaFostiropoulou.github.io" target="_blank">Portfolio Website</a>
+    <p>Hosted on GitHub Pages</p>
+  </div>
 
   <h2>Contact</h2>
-  <p>Email: <a href="mailto:dfostir@hotmail.com">dfostir@hotmail.com</a></p>
-  <p>LinkedIn: <a href="https://linkedin.com/in/dfostiropoulou" target="_blank">linkedin.com/in/dfostiropoulou</a></p>
+  <div class="contact">
+    <p>Email: <a href="mailto:dfostir@hotmail.com">dfostir@hotmail.com</a></p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/dfostiropoulou" target="_blank">linkedin.com/in/dfostiropoulou</a></p>
+  </div>
 
 </div>
 
