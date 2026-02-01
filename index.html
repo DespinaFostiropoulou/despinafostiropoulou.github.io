@@ -5,6 +5,49 @@
   <title>Despina Fostiropoulou | Project Manager Portfolio</title>
 
   <style>
+
+  :root {
+  --bg-color: #fff4e6; /* το ροδακινί background που έχεις */
+  --text-color: #333;
+  --header-bg: radial-gradient(circle at top left, #f7f2eb 0%, #ffffff 70%);
+  --card-bg: #ffffff;
+  --card-border: #e5e0d8;
+  --card-gradient: linear-gradient(180deg, #ffffff 0%, #faf7f2 100%);
+  --card-gradient-hover: linear-gradient(180deg, #ffffff 0%, #f5efe7 100%);
+  --accent-border: #d8c7b3;
+  --accent-border-hover: #c4ad94;
+}
+
+body.dark-mode {
+  --bg-color: #1e1e1e;
+  --text-color: #e6e6e6;
+  --header-bg: radial-gradient(circle at top left, #2a2a2a 0%, #1e1e1e 70%);
+  --card-bg: #2a2a2a;
+  --card-border: #444;
+  --card-gradient: linear-gradient(180deg, #2a2a2a 0%, #242424 100%);
+  --card-gradient-hover: linear-gradient(180deg, #2a2a2a 0%, #1f1f1f 100%);
+  --accent-border: #6a5f52;
+  --accent-border-hover: #8a7f72;
+}
+
+    #theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: 2px solid var(--text-color);
+  border-radius: 50%;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 18px;
+  color: var(--text-color);
+  transition: 0.3s ease;
+}
+
+#theme-toggle:hover {
+  transform: scale(1.1);
+}
+
     /* PROJECT GRID */
     .project-grid { 
       display: grid; 
@@ -17,7 +60,15 @@
         grid-template-columns: 1fr 1fr; 
       } 
     }
-    
+
+    <script>
+  const toggleBtn = document.getElementById("theme-toggle");
+  toggleBtn.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+    toggleBtn.textContent = document.body.classList.contains("dark-mode") ? "☀️" : "🌙";
+  });
+</script>
+
     body {
       margin: 0;
       padding: 0;
@@ -27,12 +78,42 @@
       line-height: 1.6;
     }
 
+    <button id="theme-toggle">🌙</button>
+
+    <nav class="top-nav">
+  <a href="index.html" class="nav-link">Home</a>
+  <a href="cv.html" class="nav-link">CV</a>
+</nav>
+
     header {
   background: #ffffff;
   background-image: radial-gradient(circle at top left, #f7f2eb 0%, #ffffff 70%);
   padding: 60px 20px;
   text-align: center;
   border-bottom: 1px solid #e5e5e5;
+}
+
+    .top-nav {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  gap: 20px;
+  z-index: 1000;
+}
+
+.nav-link {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-color);
+  text-decoration: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: 0.3s ease;
+}
+
+.nav-link:hover {
+  background-color: rgba(0,0,0,0.05);
 }
 
     h1 {
