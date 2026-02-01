@@ -71,47 +71,44 @@
       color: #444;
     }
 
-   .project-card { 
-     background-color: #ffffff; 
-     border: 1px solid #e6e2dc; 
-     border-radius: 12px; 
-     padding: 24px; 
-     box-shadow: 0 4px 10px rgba(0,0,0,0.06); 
-     transition: transform 0.25s ease, box-shadow 0.25s ease, border-left 0.25s ease; 
-     border-left: 6px solid #e8d9c5; /* classic editorial touch */ 
-     opacity: 0; animation: fadeIn 0.8s ease forwards; 
-   }
-    
+    .project-card {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 28px 32px; /* περισσότερο ύψος & πλάτος */
+  margin: 30px auto;  /* άνετο spacing */
+  width: 100%;
+  max-width: 850px;   /* πιο μακρόστενο οριζόντια */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+.project-card-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #2c3e50;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 10px;
+  font-family: "Georgia", serif;
+}
+
+.project-card-desc {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.7;
+  margin-top: 6px;
+}
+
     @keyframes fadeIn { 
       from { opacity: 0; transform: translateY(10px); } 
       to { opacity: 1; transform: translateY(0); } 
     } 
-
-.project-card:hover { 
-  transform: translateY(-4px); 
-  box-shadow: 0 6px 16px rgba(0,0,0,0.12); 
-  border-left: 6px solid #d4bfa5; /* subtle warm accent */ }
-    
-.project-card-title { 
-  font-size: 20px; 
-  font-weight: 700; 
-  color: #2c3e50; 
-  text-decoration: none; 
-  display: inline-block; 
-  margin-bottom: 8px; 
-  font-family: "Georgia", serif; /* classic touch */ 
-}
-
-.project-card-title:hover {
-  text-decoration: none;
-}
-
-.project-card-desc {
-  font-size: 15px;
-  color: #555;
-  margin-top: 4px;
-  line-height: 1.6;
-}
 
     .project-card a {
       font-weight: 600;
