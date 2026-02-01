@@ -5,6 +5,19 @@
   <title>Despina Fostiropoulou | Project Manager Portfolio</title>
 
   <style>
+    /* PROJECT GRID */
+    .project-grid { 
+      display: grid; 
+      grid-template-columns: 1fr; 
+      gap: 30px;
+      margin-top: 40px; 
+    } 
+    @media (min-width: 850px) { 
+      .project-grid { 
+        grid-template-columns: 1fr 1fr; 
+      } 
+    }
+    
     body {
       margin: 0;
       padding: 0;
@@ -58,38 +71,46 @@
       color: #444;
     }
 
-    .project-card {
-  background-color: #fff;
-  border: 1px solid #e0e0e0;
-  border-radius: 12px;
-  padding: 24px;
-  margin-bottom: 30px;
-  width: 100%;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+   .project-card { 
+     background-color: #ffffff; 
+     border: 1px solid #e6e2dc; 
+     border-radius: 12px; 
+     padding: 24px; 
+     box-shadow: 0 4px 10px rgba(0,0,0,0.06); 
+     transition: transform 0.25s ease, box-shadow 0.25s ease, border-left 0.25s ease; 
+     border-left: 6px solid #e8d9c5; /* classic editorial touch */ 
+     opacity: 0; animation: fadeIn 0.8s ease forwards; 
+   }
+    
+    @keyframes fadeIn { 
+      from { opacity: 0; transform: translateY(10px); } 
+      to { opacity: 1; transform: translateY(0); } 
+    } 
+
+.project-card:hover { 
+  transform: translateY(-4px); 
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12); 
+  border-left: 6px solid #d4bfa5; /* subtle warm accent */ }
+    
+.project-card-title { 
+  font-size: 20px; 
+  font-weight: 700; 
+  color: #2c3e50; 
+  text-decoration: none; 
+  display: inline-block; 
+  margin-bottom: 8px; 
+  font-family: "Georgia", serif; /* classic touch */ 
 }
 
-    .project-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
-}
-
-    .project-card-title {
-  font-size: 20px;
-  font-weight: 700;
-  color: #2c3e50;
-  margin-bottom: 8px;
+.project-card-title:hover {
   text-decoration: none;
-  display: inline-block;
 }
 
-    .project-card-desc {
+.project-card-desc {
   font-size: 15px;
   color: #555;
   margin-top: 4px;
+  line-height: 1.6;
 }
 
     .project-card a {
@@ -190,7 +211,7 @@
   </p>
 </div>
 
-  <div class="project-card">
+ <div class="project-card">
   <a href="https://github.com/DespinaFostiropoulou/SPSS-Analysis-Project" 
      class="project-card-title" target="_blank">
      SPSS Research Project
